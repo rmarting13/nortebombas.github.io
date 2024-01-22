@@ -17,6 +17,11 @@ h1 {
     text-align: center;;
     text-align: center;
 }
+
+.navbar-content {
+    flex-grow: 0;
+}
+
 .redondo {
     background-color: white;
     border: 0.15em solid black;
@@ -152,9 +157,8 @@ div#navbar-right {
     transform: translate(-50%,-50%); */
 }
 #container-img {
-    background-image: url("/assets/premise.png");
+    background-image: url("assets/premise.png");
     background-repeat: no-repeat;
-    display: block;
     /* background-size: 97.8em 65.7em;
     padding: 30em 0em; */
     background-size: cover;
