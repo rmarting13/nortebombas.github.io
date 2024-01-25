@@ -120,6 +120,7 @@ div#navbar-right {
 
 .row-card-container {
     padding: 3em 3em;
+    overflow: hidden;
     /* display: flex; */
     /* justify-content: space-between; */
 }
@@ -181,10 +182,11 @@ footer p {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: calc(100vh - 80px);
+    /* height: calc(100vh - 80px); */
     background-position: center center;
     justify-content: center;
     padding: 5rem;
+    overflow: hidden;
 }
 
 .left-info-card {
@@ -394,7 +396,7 @@ footer p {
     html {
         font-size: 7px;
     }
-    .row-container-main-content {
+    /* .row-container-main-content {
         flex-direction: column;
         align-items: center;
     }
@@ -409,7 +411,7 @@ footer p {
     
     .cards-container {
         flex-direction: column;
-        align-items: center;
+        align-items: center; */
     }
 }
 
@@ -417,7 +419,7 @@ footer p {
     html {
         font-size: 8px;
     }
-    .row-container-main-content {
+    /* .row-container-main-content {
         flex-direction: column;
         align-items: center;
     }
@@ -433,7 +435,7 @@ footer p {
     .cards-container {
         flex-direction: column;
         align-items: center;
-    }
+    } */
 }
 
 @media only screen and (min-width: 600px) and (max-width: 800px) {

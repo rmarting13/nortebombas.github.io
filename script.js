@@ -73,7 +73,7 @@ document.getElementById("btn-next").addEventListener("click", async (event) => {
 let onAppear = [];
 
 document.addEventListener("DOMContentLoaded", function() {
-  onAppear = [].map.call(document.querySelectorAll(".card"), function(item ) {
+  onAppear = [].map.call(document.querySelectorAll(".infocard"), function(item ) {
     return item;
   });
 }, false);
@@ -87,8 +87,10 @@ window.addEventListener("scroll", function() {
     
     if (vwBottom > elemTop && ((vwTop - elemHeight) < elemTop)) {
      elem.classList.replace("hide-left", "show-left");
+     elem.classList.replace("hide-right", "show-right");
     } else {
      elem.classList.replace("show-left", "hide-left");
+     elem.classList.replace("show-right", "hide-right");
     }
   });
 }, false);
