@@ -10,15 +10,23 @@ body {
     margin: 0em; 
 }
 
+.navbar-brand img {
+    display: flex;
+    width: 22%;
+    height: auto;
+}
+
 .navbar-content {
     flex-grow: 0;
 }
 
 .nav-link {
     font-size: large;
+    border-radius: 1rem;
 }
 
 .nav-link:hover {
+    
     background-color: darkorange;
 }
 /* 
@@ -52,6 +60,10 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
 }
 
+.carousel-caption p {
+    font-size: large;
+}
+
 #navbar {
     /*display: flex;
     justify-content: space-between;
@@ -59,7 +71,7 @@ body {
     padding: 1.1em 8em; 
     position: sticky;*/
     /* top: 0em; */
-    background-color:royalblue;
+    background-image:linear-gradient(rgb(65, 105, 225), #201b24);
 }
 
 div#navbar-right {
@@ -68,7 +80,7 @@ div#navbar-right {
 }
 
 #rc2 {
-    background-color: #201b24;
+    background-color:#201b24;
 }
 
 #header-1 {
@@ -89,6 +101,43 @@ div#navbar-right {
     height: calc(100vh - 80px);
     background-position: center center;
     justify-content: center;
+}
+
+.side-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.redondo {
+    background-color: white;
+    border: 0.15em solid black;
+    border-radius: 1.5626em;
+    border-width: 0.2em;
+    width: 9em;
+    height: 3em;
+}
+
+.row-card-container {
+    padding: 3em 3em;
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+.row-container {
+    padding: 1em, 0em;
+}
+
+/* .content-box-title {
+    padding-left: 1.5em;
+    padding-top: 2em;
+} */
+
+.img-content img, .right-info-card img {
+    border-radius:0em 3em 3em 3em;
+    vertical-align: top;
+    width:44em;
+    height:30em;
+    image-rendering: auto;
 }
 
 footer {
@@ -122,6 +171,67 @@ footer p {
     text-decoration: white;
     font-size: 1.1em;
 }
+
+#card-txt p {
+    font-size:larger;
+}
+
+#bg-info-cards-container {
+    background-image: url("assets/nortebombas_store.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: calc(100vh - 80px);
+    background-position: center center;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.left-info-card {
+    border-radius:0em 3em 3em 0em;
+    margin: 1rem 10rem 1rem -10rem;
+    padding: 3rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: end;
+}
+
+.left-info-card img {
+    border-radius:3em 0em 3em 3em;
+    vertical-align: top;
+    width: 36em;
+    height: 27em;
+    image-rendering: auto;
+}
+
+.right-info-card {
+    border-radius:3em 0em 0em 3em;
+    margin: 1rem -10rem 1rem 10rem;
+    padding: 3rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: start;
+}
+
+.right-info-card img {
+    border-radius:0em 3em 3em 3em;;
+    vertical-align: top;
+    width: 36em;
+    height: 27em;
+    image-rendering: auto;
+}
+
+.img-info-container {
+    display: flex;
+    justify-content: end;
+}
+
+.info-card-text {
+    color: aliceblue;
+}
+
 #footer-p {
     width: 23em;
     resize: horizontal;
@@ -129,6 +239,156 @@ footer p {
     font-size: 0.9em;
 }
 
+/**********************TRANSITIONS***********************************/
+
+/* .elementToFadeInAndOut {
+    width:200px;
+    height: 200px;
+    -webkit-animation: fadeinout 1s linear forwards;
+    animation: fadeinout 1s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+} */
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 300ms;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fade-out {
+	opacity: 0;
+	animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 300ms;
+}
+
+@keyframes fadeOutOpacity {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.slide-in {
+    animation-name: show-right;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-fill-mode:forwards;
+}
+
+.slide-out {
+    animation-name: hide-right;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-fill-mode:forwards;
+}
+
+@keyframes hide-right {
+    0%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes show-right {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes show-left {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes hide-left {
+    0%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(200%);
+    }
+}
+
+.hide-left {
+    animation-name: hide-left;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-fill-mode:forwards;
+}
+
+.hide-right {
+    animation-name: hide-right;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-fill-mode:forwards;
+}
+
+.show-left {
+    animation-name: show-left;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-fill-mode:forwards;
+}
+
+.show-right {
+    animation-name: show-right;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-fill-mode:forwards;
+}
 
 @media only screen and (min-width: 350px) and (max-width: 500px) {
     html {
