@@ -20,11 +20,12 @@ const descriptions = ['Venta y reparación de Bombas de Automotor, línea agríc
 const img_urls = ['assets/vehicle.jpg',
                     'assets/agricola.jpeg',
                     'assets/mechanical_seal.jpeg',
-                    'assets/industrial_bomb_background.png']
+                    'assets/industrial_bomb_background.png'];
 
 document.getElementById("btn-next").addEventListener("click", async (event) => {
     const pic = document.getElementById('card-img');
     const txt = document.getElementById('card-txt');
+    const logo = txt.querySelector('img');
     pic.classList.replace('fade-in', 'fade-out');
     txt.classList.replace('slide-in', 'slide-out');
     await delay(300);
@@ -35,6 +36,12 @@ document.getElementById("btn-next").addEventListener("click", async (event) => {
     const pvalue = descriptions.shift();
     txt.querySelector('h1').innerText = h1value;
     titles.push(h1value);
+    if(h1value.length == 25) {
+      logo.hidden = false;
+    }
+    else {
+      logo.hidden = true;
+    }
     txt.querySelector('p').innerText = pvalue;
     descriptions.push(pvalue)
     pic.classList.replace('fade-out', 'fade-in');
