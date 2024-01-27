@@ -118,6 +118,12 @@ div#navbar-right {
     height: 3em;
 }
 
+.card-container {
+    padding: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
 .row-card-container {
     padding: 3em 3em;
     overflow: hidden;
@@ -426,7 +432,6 @@ footer p {
   .image-fader img:nth-of-type(2) {
     animation-delay: 0s;
   }
-  
 
 @media only screen and (min-width: 350px) and (max-width: 500px) {
     html {
